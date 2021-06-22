@@ -3,16 +3,43 @@
     --color-black: #171717;
     --bg-pink: #DDBCA6;
     --bg-dark: #DDBCA6;
+    --bg-black: #000000;
     --bg-degrate-dark: radial-gradient(circle, rgba(42,42,42,1) 0%, rgba(18,18,18,1) 200%);
     --gold-blod: #8A5913;
     --gold-white: #FDF8C0;
     --gold-bold: #9A530F;
+    --btn-gold-gradient:linear-gradient(90deg, rgba(138,89,19,1) 0%, rgba(185,154,89,1) 49%, rgba(154,83,15,1) 100%);
+
 }
+
 
 @font-face {
     font-family: 'Champage';
     src: url('../fonts/champage.ttf');
 }
+
+.form{
+    display: block;
+    width:100%;
+    background-color: var(--bg-black);
+    border:none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    color:white;
+    margin:auto;
+    font-weight: bold;
+}
+
+.btn{
+    display:block;
+    width:100%;
+}
+
+.btn-gold-gradient{
+    background: var(--btn-gold-gradient) !important;
+}
+
+/* TOP SECTION  */
 
 #topSection{
     width:100%;
@@ -28,4 +55,51 @@
     margin-top:10px;
 }
 
+#topSection h1,h2,h4,p{
+    color:white;
+    font-family: 'Calibri';
+    text-align:center;
+}
 
+#topSection h1,h2,h4{
+    font-weight: bold;
+    letter-spacing: 10pt;
+}
+
+#topSection h1{
+    font-size:50px;
+}
+
+#topSection h2{
+    font-size: 38px;
+}
+
+#topSection h4{
+    font-size:25px;
+}
+
+#topSection p{
+    display: block;
+    margin:auto;
+    max-width: 400px;
+    font-size:20px;
+}
+
+#topSection form{
+    display: block;
+    position: relative;
+    width:90%;
+    max-width: 600px;
+    margin:auto;
+}
+
+#topSection form .form,
+#topSection form .btn{
+    margin-top:20px;
+    font-size:18px;
+}
+
+#topSection form .btn{
+    color:black;
+    font-weight: bold;
+}
