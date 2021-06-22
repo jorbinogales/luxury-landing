@@ -1,0 +1,31 @@
+:root{
+    --color-white: #fff;
+    --color-black: #171717;
+    --bg-pink: #DDBCA6;
+    --bg-dark: #DDBCA6;
+    --bg-degrate-dark: radial-gradient(circle, rgba(42,42,42,1) 0%, rgba(18,18,18,1) 200%);
+    --gold-blod: #8A5913;
+    --gold-white: #FDF8C0;
+    --gold-bold: #9A530F;
+}
+
+@font-face {
+    font-family: 'Champage';
+    src: url('../fonts/champage.ttf');
+}
+
+#topSection{
+    width:100%;
+    height:auto;
+    min-height: 100vh;
+    background: var(--bg-degrate-dark);
+}
+
+#topSection .logo{
+    display:block;
+    max-width:200px;
+    margin:auto;
+    margin-top:10px;
+}
+
+

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link 
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" 
+          crossorigin="anonymous"
+    >
+    <link href="styles/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <main id="app">
+        <topcomponent></topcomponent>
+        <servicecomponent></servicecomponent>
+        <experiencecomponent></experiencecomponent>
+        <weworkcomponent></weworkcomponent>
+        <aboutcomponent></aboutcomponent>
+        <footercomponent></footercomponent>
+    </main>
+
+    <template id="top">
+        <div>
+            <section id="topSection">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <img src="img/logo.png" class="logo">
+                        <h4>tu Propia</h4>
+                        <h2>franquicia</h2>
+                        <h1>Luxury</h1>
+
+                        <p>Registra tus datos para enviarte toda 
+                           la información sobre nuestra franquicia
+                           y nuestros datos de contacto.</p>
+
+                    </div>
+                    <div class="col-6 col-md-6">
+                        <form action="">
+                            <div class="form-group">
+                                <input type="text" class="form" placeholder="Nombre:">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form" placeholder="Apellidos:">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form" placeholder="Correo:">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form" placeholder="Teléfonos:">
+                            </div>
+                            <input type="submit" class="btn" value="Más información">
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </template>
+
+    <template id="service">
+        <div>
+           <section id="serviceSection">
+                <div class="row">
+                    <div class="col-12 col-md-3" v-for="service in services">
+                        <div class="tarjet">
+                            <img :src="'img/'+service.img" alt="luxury">
+                            {{ service.title }}
+                            {{ service.description }}
+                        </div>
+                    </div>
+                </div>
+           </section>
+        </div>
+    </template>
+
+    <template id="experience">
+        <div>
+            <section id="serviceSection">
+                 <h2><span>6</span> Áreas de experiencia en el sector belleza</h2>
+                 <div class="row">
+                     <div class="col-12 col-md-4" v-for="experience in experiences">
+                            <img :src="'img/'+experience.img+'.png'" alt="luxury">
+                           {{ experience.description }}
+                     </div>
+                 </div>
+            </section>
+         </div>
+    </template>
+
+    <template id="weWork">
+        <div>
+           <section id="weWorkSection">
+                <h2>Algunos de nuestros trabajos</h2>
+                <div class="row">
+                    <div class="col-12 col-md-4" v-for="work in works">
+                        <img :src="'img/'+work.img" alt="luxury">
+                    </div>
+                </div>
+           </section>
+        </div>
+    </template>
+
+    <template id="about">
+        <div>
+            <section id="aboutSection">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <h3>Lo que dicen de</h3>
+                        <h2>NOSOTROS</h2>
+                        <p>Nuestra gente y Nuestros clientes</p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <img src="img/about2.png" alt="">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h2>Conoce un poco de nosotros</h2>
+                        <div>
+                            <p>El franquiciado de Luxury Salón combina todo nuestro conocimiento sobre estilismo, depilación, uñas, maquillaje, venta de productos de belleza de alta gama y asesoramiento profesional en un sistema de trabajo que provee resultados de alta calidad para los clientes, y que es altamente lucrativo para el negocio y para el capital humano que brinda el servicio.</p>
+                            <p>Nuestra premisa básica es que no necesitas ser un estilista para iniciar tu propio salón de belleza.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </template>
+
+    <template id="footer">
+        <div>
+            <section id="footerSection">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Grandes números, para grandes negocios</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-4" v-for="aboutNumber in aboutNumbers">
+                        <h2>{{aboutNumber.cant}}</h2>
+                        <h4>{{aboutNumber.description}}</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h2>¿Quieres saber más?</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-3" v-for="socialmedia in socialmedias">
+                        <img :src="'img/'+socialmedia.img" alt="luxury">
+                        <h4>{{socialmedia.text}}</h4>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </template>
+
+    <script src="js/vue.js"></script>
+    <script src="js/axios.min.js"></script>
+    <script>
+
+        const Top = {
+            template:'#top',
+        }
+
+        const Service = {
+            template: '#service',
+            data(){
+                return {
+                    services: [
+                        {
+                            img:'service1.png',
+                            title: `KNOW HOW`,
+                            description:`Manuales, capacitación y orientación en administración, gerencia y adiestramiento profesional en todos los servicios que brindamos.`,
+                        },
+                        {
+                            img:'service2.png',
+                            title: `EQUIPO Y MOBILIARIOS`,
+                            description:`Proveeduría y venta a precios preferenciales de todos los productos nacionales e importados, mobiliario nacional e insumos que requieras para tu salón.`,
+                        },
+                        {
+                            img:'service3.png',
+                            title: `ENTRENAMIENTO`,
+                            description:`Gerente,  administrador, contador, encargados, mantenimiento, estilistas, manicure y depilación corporal. y técnicos auxiliares.`,
+                        },
+                        {
+                            img:'service4.png',
+                            title: `MARKETING`,
+                            description:`Al ser parte de nuestras franquicias las posibilidades de comunicación y marketing son superiores ya que formarás parte de una red comercial claramente definida y reconocida`,
+                        }
+                    ],
+                }
+            },
+        }
+
+        const Experience = {
+            template: '#experience',
+            data(){
+                return {
+                    experiences: [
+                        {
+                            img:'experience1',
+                            description:'Estilismo básico (lavado, corte, secado, planchado, alisado, hidratación, base color)',
+                        },
+                        {
+                            img:'experience2',
+                            description:'Spa de uñas (manicure, pedicure, esculpidos acrílico, gel, resina, baño de gel, acrílico o resina sobre la uña natural.',
+                        },
+                        {
+                            img:'experience3',
+                            description:'Barberia para caballeros',
+                        },
+                        {
+                            img:'experience4',
+                            description:'Depilacion corporal (cejas, bozo, piernas, brasilero, area bikini, axilas, y más)',
+                        },
+                        {
+                            img:'experience5',
+                            description:'Estilismo de colorimetria (balayage, highlight, babylight, técnica en tendencia )',
+                        },
+                        {
+                            img:'experience6',
+                            description:'Maquillaje profesional',
+                        }
+                    ],
+                }
+            }
+        }
+
+        const WeWork = {
+            template: '#weWork',
+            data(){
+                return {
+                    works: [
+                        {
+                            img:'work1.png',
+                        },
+                        {
+                            img:'work2.png',
+                        },
+                        {
+                            img:'work3.png',
+                        },
+                    ],
+                }
+            },
+        }
+
+        const About = {
+            template: '#about',
+        }
+
+        const Footer = {
+            template: '#footer',
+            data(){
+                return {
+                    aboutNumbers:[
+                        {
+                            cant:10,
+                            description: 'Años de gestión exitosa',
+                        },
+                        {
+                            cant:50,
+                            description: '% de utilidad neta por  cada servicio',
+                        },
+                        {
+                            cant:06,
+                            description: 'Areas de experiencia en el sector belleza',
+
+                        },
+                    ],
+                    socialmedias: [
+                        {
+                            img: 'red1.png',
+                            text: '0414-5175159',
+                        },
+                        {
+                            img: 'red2.png',
+                            text: '@luxurysalon.ve',
+                        },
+                        {
+                            img: 'red3.png',
+                            text: '@luxurysalon.ve',
+                        },
+                        {
+                            img: 'red4.png',
+                            text: '@luxurysalon.ve',
+                        }
+                    ]
+                }
+            }
+        }
+
+    
+        const app = new Vue({
+            el:'#app',
+            components: {
+                'topcomponent': Top,
+                'servicecomponent': Service,
+                'experiencecomponent': Experience,
+                'weworkcomponent': WeWork,
+                'aboutcomponent': About,
+                'footercomponent': Footer,
+            }
+        });
+
+   
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>
