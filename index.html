@@ -63,13 +63,13 @@
 
     <template id="service">
         <div>
-           <section id="serviceSection">
+           <section id="serviceSection" class="p-5">
                 <div class="row">
                     <div class="col-12 col-md-3" v-for="service in services">
-                        <div class="tarjet">
+                        <div class="target">
                             <img :src="'img/'+service.img" alt="luxury">
-                            {{ service.title }}
-                            {{ service.description }}
+                            <h3>{{ service.title }}</h3>
+                            <h4>{{ service.description }}</h4>
                         </div>
                     </div>
                 </div>
@@ -79,13 +79,17 @@
 
     <template id="experience">
         <div>
-            <section id="serviceSection">
+            <section id="experienceSection" class="p-5">
                  <h2><span>6</span> Áreas de experiencia en el sector belleza</h2>
                  <div class="row">
-                     <div class="col-12 col-md-4" v-for="experience in experiences">
-                            <img :src="'img/'+experience.img+'.png'" alt="luxury">
-                           {{ experience.description }}
-                     </div>
+                     <div class="col-12 col-md-4" v-for="experience in experiences">        
+                        <div class="target">
+                            <div>
+                                <img :src="'img/'+experience.img+'.png'" alt="luxury">
+                            </div>
+                            <span>{{ experience.description }}</span>
+                        </div>
+                    </div>
                  </div>
             </section>
          </div>
@@ -93,11 +97,17 @@
 
     <template id="weWork">
         <div>
-           <section id="weWorkSection">
-                <h2>Algunos de nuestros trabajos</h2>
-                <div class="row">
-                    <div class="col-12 col-md-4" v-for="work in works">
-                        <img :src="'img/'+work.img" alt="luxury">
+           <section id="weWorkSection" class="p-5">
+               <div class="position-relative">
+                    <h2>Algunos de nuestros trabajos</h2>
+                    <div class="row">
+                        <div class="col-12 col-md-4" v-for="work in works">
+                            <div>
+                                <div class="target">
+                                    <img :src="'img/'+work.img" alt="luxury">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
            </section>
@@ -107,18 +117,25 @@
     <template id="about">
         <div>
             <section id="aboutSection">
-                <div class="row">
+
+                <div class="content-light p-3">
+                </div>
+                
+                <div class="row p-5 m-0" id="firstAbout">
                     <div class="col-12 col-md-6">
                         <h3>Lo que dicen de</h3>
                         <h2>NOSOTROS</h2>
-                        <p>Nuestra gente y Nuestros clientes</p>
+                        <i>Nuestra gente & Nuestros clientes</i>
                     </div>
                     <div class="col-12 col-md-6">
                         
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="content-light p-5">
+                </div>
+
+                <div class="row p-4 m-0" id="secondAbout">
                     <div class="col-12 col-md-6">
                         <img src="img/about2.png" alt="">
                     </div>
@@ -131,32 +148,37 @@
                     </div>
                 </div>
             </section>
+            <img src="img/mancha2.png" class="mancha" alt="">
         </div>
     </template>
 
     <template id="footer">
         <div>
-            <section id="footerSection">
-                <div class="row">
-                    <div class="col-12">
+            <section id="footerSection" class="sp-5">
+                <div class="row p-5 m-0">
+                    <div class="col-12 p-0 m-0">
                         <h2>Grandes números, para grandes negocios</h2>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12 col-md-4" v-for="aboutNumber in aboutNumbers">
-                        <h2>{{aboutNumber.cant}}</h2>
+                <div class="row p-5 m-0 numbers">
+                    <div class="col-12 col-md-4 m-0 p-0" v-for="aboutNumber in aboutNumbers">
+                        <h3>{{aboutNumber.cant}}</h3>
                         <h4>{{aboutNumber.description}}</h4>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12">
-                        <h2>¿Quieres saber más?</h2>
+                <div id="end" class="p-5">
+                    <div class="row m-0">
+                        <div class="col-12 m-0 p-0">
+                            <h2>¿Quieres saber más?</h2>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-3" v-for="socialmedia in socialmedias">
-                        <img :src="'img/'+socialmedia.img" alt="luxury">
-                        <h4>{{socialmedia.text}}</h4>
+                    <div class="row m-0 p-0">
+                        <div class="col-12 col-md-3 p-0 m-0" v-for="socialmedia in socialmedias">
+                            <div class="target">
+                                <img :src="'img/'+socialmedia.img" alt="luxury">
+                                <h4>{{socialmedia.text}}</h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
