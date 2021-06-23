@@ -136,7 +136,7 @@
     background-color: var(--bg-pink);
     border-radius:10px;
     width:90%;
-    max-width:400px;
+    max-width:300px;
     padding:20px;
     min-height:420px;
 }
@@ -167,6 +167,7 @@
     letter-spacing: 2px;
     font-size:15px;
     color:black;
+    text-align: center;
 }
 
 #experienceSection h2{
