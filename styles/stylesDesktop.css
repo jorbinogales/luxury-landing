@@ -1,0 +1,70 @@
+@media only screen and (min-width: 768px){
+
+    #topSection .logo{
+        position: absolute;
+        left:50px;
+        top:0;
+        display:block;
+        max-width:150px;
+        margin:auto;
+        margin-top:10px;
+    }
+
+    #topSection .text{
+        margin-top:100px;
+    }
+
+    #topSection h1,
+    #topSection h2,
+    #topSection h4,
+    #topSection p{
+        display: block;
+        margin:auto;
+        text-align: left;
+        margin-left:50px
+    }
+
+    #topSection h2,
+    #topSection h4{
+        line-height: 60px;
+        max-width: 500px;
+    }
+
+    #topSection h4{
+        font-size: 40px;
+    }
+
+    #topSection h2{
+        font-size: 60px;
+    }
+
+    #topSection h1{
+        font-size:80px;
+    }
+
+    #topSection p{
+        margin: 0px 0px 0px 50px;
+        max-width: 400px;
+        font-size:25px;
+        line-height: 30px;
+    }
+
+    #topSection form{
+        margin-top:100px;
+    }
+
+    #secondAbout{
+        background:white;
+    }
+
+    #secondAbout .text{
+        padding: 100px 25px;
+        background-color: var(--bg-pink);
+    }
+
+    #footerSection .mancha{
+        position: absolute;
+        top:10px;
+    }
+
+}

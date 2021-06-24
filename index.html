@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Luxury</title>
     <link 
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" 
           rel="stylesheet" 
@@ -12,6 +12,7 @@
           crossorigin="anonymous"
     >
     <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/stylesDesktop.css" rel="stylesheet">
 </head>
 <body>
 
@@ -30,14 +31,15 @@
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <img src="img/logo.png" class="logo">
-                        <h4>Tu Propia</h4>
-                        <h2>franquicia</h2>
-                        <h1>Lúxury</h1>
+                        <div class="text">
+                            <h4>Tu Propia</h4>
+                            <h2>franquicia</h2>
+                            <h1>Lúxury</h1>
 
-                        <p>Registra tus datos para enviarte toda 
-                           la información sobre nuestra franquicia
-                           y nuestros datos de contacto.</p>
-
+                            <p>Registra tus datos para enviarte toda 
+                            la información sobre nuestra franquicia
+                            y nuestros datos de contacto.</p>
+                        </div>
                     </div>
                     <div class="col-12 col-md-6">
                         <form action="">
@@ -97,7 +99,11 @@
 
     <template id="weWork">
         <div>
-           <section id="weWorkSection" class="p-5">
+           <section id="weWorkSection" class="p-5 position-relative">
+               <div class="background bg-1"></div>
+               <div class="background bg-2"></div>
+               <div class="background bg-3"></div>
+               <div class="background bg-4"></div>
                <div class="position-relative">
                     <h2>Algunos de nuestros trabajos</h2>
                     <div class="row">
@@ -116,13 +122,13 @@
 
     <template id="about">
         <div>
-            <section id="aboutSection">
+            <section id="aboutSection" class="position-relative">
 
                 <div class="content-light p-3">
                 </div>
                 
                 <div class="row p-5 m-0" id="firstAbout">
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-12">
                         <h3>Lo que dicen de</h3>
                         <h2>NOSOTROS</h2>
                         <i>Nuestra gente & Nuestros clientes</i>
@@ -135,26 +141,33 @@
                 <div class="content-light p-5">
                 </div>
 
+                <img src="img/aro.png" class="aro aro-1 d-none d-md-block" alt="">
+                <img src="img/aro.png" class="aro aro-2 d-none d-md-block" alt="">
+                <img src="img/aro.png" class="aro aro-3 d-none d-md-block" alt="">
+
                 <div class="row p-4 m-0" id="secondAbout">
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-4">
                         <img src="img/about2.png" alt="">
                     </div>
-                    <div class="col-12 col-md-6">
-                        <h2>Conoce un poco de nosotros</h2>
-                        <div>
-                            <p>El franquiciado de Luxury Salón combina todo nuestro conocimiento sobre estilismo, depilación, uñas, maquillaje, venta de productos de belleza de alta gama y asesoramiento profesional en un sistema de trabajo que provee resultados de alta calidad para los clientes, y que es altamente lucrativo para el negocio y para el capital humano que brinda el servicio.</p>
-                            <p>Nuestra premisa básica es que no necesitas ser un estilista para iniciar tu propio salón de belleza.</p>
+                    <div class="col-12 col-md-8">
+                        <div class="text">
+                            <h2>Conoce un poco de nosotros</h2>
+                            <div>
+                                <p>El franquiciado de Luxury Salón combina todo nuestro conocimiento sobre estilismo, depilación, uñas, maquillaje, venta de productos de belleza de alta gama y asesoramiento profesional en un sistema de trabajo que provee resultados de alta calidad para los clientes, y que es altamente lucrativo para el negocio y para el capital humano que brinda el servicio.</p>
+                                <p>Nuestra premisa básica es que no necesitas ser un estilista para iniciar tu propio salón de belleza.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <img src="img/mancha2.png" class="mancha" alt="">
+           
         </div>
     </template>
 
     <template id="footer">
         <div>
-            <section id="footerSection" class="sp-5">
+            <section id="footerSection" class="position-relative">
+                <img src="img/mancha2.png" class="mancha" alt="">
                 <div class="row p-5 m-0">
                     <div class="col-12 p-0 m-0">
                         <h2>Grandes números, para grandes negocios</h2>

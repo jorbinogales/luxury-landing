@@ -13,7 +13,6 @@
 
 }
 
-
 @font-face {
     font-family: 'Champage';
     src: url('../fonts/champage.ttf');
@@ -25,18 +24,38 @@
 }
 
 .form{
+    position: relative;
     display: block;
     width:100%;
     background-color: var(--bg-black);
     border:none;
     border-radius: 5px;
     padding: 10px 10px;
-    color:white;
+    color:white !important;
     margin:auto;
     font-weight: bold;
 }
 
+.form::-moz-placeholder{
+    color: white;
+}
+.form:-ms-input-placeholder{
+    color: white;
+}
+.form::placeholder{
+    color: white;
+}
+
+.form:focus-visible{
+    color: white;
+}
+
+.form:hover{
+    color: white !important;
+}
+
 .mancha{
+
     display: block;
     max-width: 250px;
 }
@@ -57,6 +76,19 @@
     height:auto;
     min-height: 100vh;
     background: var(--bg-degrate-dark);
+}
+
+#topSection::before{
+    position: absolute;
+    top:0;
+    left:0;
+    content: '';
+    background-image: url('../img/bg.png');
+    background-size: cover;
+    background-position: top center;
+    display: block;
+    width: 100%;
+    height:100%;
 }
 
 #topSection .logo{
@@ -223,6 +255,33 @@
 
 /* OUR WORK */
 
+.background{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin:auto;
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.bg-1{
+    background-image: url('../img/bg-1.png');
+}
+
+.bg-2{
+    background-image: url('../img/bg-2.png');
+}
+
+.bg-3{
+    background-image: url('../img/bg-3.png');
+}
+
+.bg-4{
+    background-image: url('../img/bg-4.png');
+}
+
 #weWorkSection h2{
     color: var(--bg-pink);
     text-align: center;
@@ -300,7 +359,6 @@
 }
 
 #secondAbout{
-    display:block;
     width:100%;
     background: var(--bg-pink);
 }
@@ -318,12 +376,38 @@
     font-family:'Calibri';
 }
 
+#aboutSection .aro{
+    display: block;
+    width:100%;
+    max-width: 150px;
+    position: absolute;
+    z-index: 10;
+}
+
+#aboutSection .aro-1{
+    bottom:-50px;
+    right:100px;
+    transform: scale(.5);
+}
+
+#aboutSection .aro-2{
+    transform: scale(.5);
+    top:300px;
+    right:50px;
+}
+
+#aboutSection .aro-3{
+    transform: scale(1);
+    bottom:-50px;
+    left:50px;
+}
+
 #secondAbout h2{
     font-size:28px;
     letter-spacing: 5px;
 }
 
-#secondAbout .col-12 div{
+#secondAbout .text div{
     padding-left: 15px;
     margin-top:25px;
     border-left: 4px solid var(--gold-blod);
@@ -332,6 +416,7 @@
 #secondAbout p{
     font-size:15px;
     letter-spacing: 0px;
+    font-weight: bold;
 }
 
 #footerSection h2{
