@@ -54,7 +54,10 @@
     }
 
     #secondAbout{
-        background:white;
+        position:relative;
+        background:#fff;
+        max-width: 1000px;
+        margin: auto;
     }
 
     #secondAbout .text{

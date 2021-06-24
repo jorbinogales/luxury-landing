@@ -1,0 +1,22 @@
+{
+  "name": "luxury",
+  "version": "1.0.0",
+  "description": "luxury Package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorbinogales/luxury-landing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jorbinogales/luxury-landing/issues"
+  },
+  "homepage": "https://github.com/jorbinogales/luxury-landing#readme",
+  "dependencies": {
+    "sass": "^1.35.1"
+  }
+}

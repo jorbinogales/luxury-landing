@@ -23,6 +23,8 @@
     src: url('../fonts/bembo.otf');
 }
 
+
+
 .form{
     position: relative;
     display: block;
@@ -75,7 +77,32 @@
     width:100%;
     height:auto;
     min-height: 100vh;
+}
+
+.bg-black{
+    position: absolute;
+    top:0;
+    left:0;
+    display: block;
+    width: 100%;
+    height:100%;
     background: var(--bg-degrate-dark);
+    z-index:-10;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: .2;
+    z-index:-5;
+}
+
+#topSection .text{
+    position: relative;
+    z-index: 100;
 }
 
 #topSection::before{
@@ -135,7 +162,7 @@
     display: block;
     position: relative;
     width:90%;
-    max-width: 600px;
+    max-width: 400px;
     margin:auto;
 }
 
@@ -151,6 +178,11 @@
 }
 
 /* SERVICE SECTION */
+
+#serviceSection{
+    background: white;
+    z-index: 0;
+}
 
 #serviceSection img{
     display:block;
@@ -183,7 +215,6 @@
 #serviceSection .target h4{
     display: block;
     font-weight: bold;
-    text-align: center;
 }
 
 #serviceSection .target h3{
@@ -193,13 +224,24 @@
     font-weight: bold;
     font-family: 'Bembo';
     color:black;
+    text-align: center !important;
 }
 
 #serviceSection .target h4{
+    display: block;
     font-weight: bold;
     font-family: 'Champage';
     letter-spacing: 2px;
     font-size:15px;
+    text-align: center !important;
+    max-width: 200px;
+    margin:auto;
+}
+
+/* EXPERIENCE */
+
+#experienceSection{
+    background-color: white;
 }
 
 #experienceSection h2{
@@ -292,6 +334,7 @@
     position: relative;
     background: var(--bg-degrate-dark);
     overflow: hidden;
+    z-index: -15;
 }
 
 #weWorkSection .row .target{
@@ -419,6 +462,11 @@
     font-weight: bold;
 }
 
+#footerSection{
+    position: relative;
+    background-color: white;
+}
+
 #footerSection h2{
     text-align: center;
     margin:auto;
@@ -456,8 +504,10 @@
 }
 
 #end{ 
+    position: relative;
     display: block;
     background: var(--bg-degrate-dark);
+    z-index: 5;
 }
 
 #end h2{
