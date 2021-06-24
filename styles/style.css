@@ -80,12 +80,12 @@
 }
 
 .bg-black{
-    position: absolute;
+    position: fixed;
     top:0;
     left:0;
     display: block;
     width: 100%;
-    height:100%;
+    height:100vh;
     background: var(--bg-degrate-dark);
     z-index:-10;
 }
@@ -106,7 +106,7 @@
 }
 
 #topSection::before{
-    position: fixed;
+    position: absolute;
     top:0;
     left:0;
     content: '';
@@ -116,7 +116,6 @@
     display: block;
     width: 100%;
     height:100%;
-    z-index: -1;
 }
 
 #topSection .logo{
