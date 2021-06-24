@@ -71,14 +71,6 @@
     background: var(--btn-gold-gradient) !important;
 }
 
-/* TOP SECTION  */
-
-#topSection{
-    width:100%;
-    height:auto;
-    min-height: 100vh;
-}
-
 .bg-black{
     position: fixed;
     top:0;
@@ -89,6 +81,16 @@
     background: var(--bg-degrate-dark);
     z-index:-10;
 }
+
+
+/* TOP SECTION  */
+
+#topSection{
+    width:100%;
+    height:auto;
+    min-height: 100vh;
+}
+
 
 #myVideo {
     position: fixed;
@@ -334,7 +336,7 @@
     position: relative;
     background: var(--bg-degrate-dark);
     overflow: hidden;
-    z-index: -15;
+    z-index: -10;
 }
 
 #weWorkSection .row .target{
