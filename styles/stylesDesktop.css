@@ -79,7 +79,6 @@
         position: relative;
         background: var(--bg-degrate-dark);
         overflow: hidden;
-        z-index: -10;
     }
     
 
