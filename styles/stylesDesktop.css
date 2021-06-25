@@ -1,9 +1,14 @@
 @media only screen and (min-width: 768px){
 
+    #topSection{
+        height:auto;
+        max-height: 600px;
+    }
+
     #topSection .logo{
         position: absolute;
         left:50px;
-        top:0;
+        top:-50px;
         display:block;
         max-width:150px;
         margin:auto;
@@ -69,5 +74,13 @@
         position: absolute;
         top:10px;
     }
+
+    #weWorkSection{
+        position: relative;
+        background: var(--bg-degrate-dark);
+        overflow: hidden;
+        z-index: -10;
+    }
+    
 
 }
