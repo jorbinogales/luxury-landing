@@ -46,21 +46,59 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
-                        <form action="">
-                            <div class="form-group">
-                                <input type="text" class="form" placeholder="Nombre:">
+                        <div v-if="!send">
+                            <form @submit.prevent="addPeople">
+                                <div class="form-group">
+                                    <input type="text" 
+                                           name="first_name" 
+                                           class="form" 
+                                           placeholder="Nombre:" 
+                                           >
+                                </div>
+                                <div class="form-group">
+                                    <input 
+                                        type="text" 
+                                        name="last_name" 
+                                        class="form" 
+                                        placeholder="Apellidos:" 
+                                        >
+                                </div>
+                                <div class="form-group">
+                                    <input 
+                                        type="email" 
+                                        name="email" 
+                                        class="form" 
+                                        placeholder="Correo:">
+                                </div>
+                                <div class="form-group">
+                                    <input 
+                                        type="tel" 
+                                        name="phone" 
+                                        class="form" 
+                                        placeholder="Teléfonos:" 
+                                        pattern="[0-9]{11,14}">
+                                </div>
+                                <input 
+                                    type="submit" 
+                                    class="btn btn-gold-gradient" 
+                                    value="Más información"
+                                    :disabled="sending"
+                                    >
+                            </form>
+                        </div>
+                        <div v-else>
+                            <div class="alert m-3">
+                                <div class="success-checkmark">
+                                    <div class="check-icon">
+                                      <span class="icon-line line-tip"></span>
+                                      <span class="icon-line line-long"></span>
+                                      <div class="icon-circle"></div>
+                                      <div class="icon-fix"></div>
+                                    </div>
+                                </div>
+                                <p>Mensaje enviado correctamente</p>
                             </div>
-                            <div class="form-group">
-                                <input type="text" class="form" placeholder="Apellidos:">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form" placeholder="Correo:">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form" placeholder="Teléfonos:">
-                            </div>
-                            <input type="submit" class="btn btn-gold-gradient" value="Más información">
-                        </form>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -130,7 +168,7 @@
                 <div class="content-light p-3">
                 </div>
                 
-                <div class="row p-5 m-0" id="firstAbout">
+                <!-- <div class="row p-5 m-0" id="firstAbout">
                     <div class="col-12 col-md-12">
                         <h3>Lo que dicen de</h3>
                         <h2>NOSOTROS</h2>
@@ -139,7 +177,7 @@
                     <div class="col-12 col-md-6">
                         
                     </div>
-                </div>
+                </div> -->
 
                 <div class="content-light p-5">
                 </div>
@@ -155,6 +193,7 @@
                     <div class="col-12 col-md-6">
                         <div class="text">
                             <h2>Conoce un poco de nosotros</h2>
+                            <i>Nuestra gente & Nuestros clientes </i>
                             <div>
                                 <p>El franquiciado de Luxury Salón combina todo nuestro conocimiento sobre estilismo, depilación, uñas, maquillaje, venta de productos de belleza de alta gama y asesoramiento profesional en un sistema de trabajo que provee resultados de alta calidad para los clientes, y que es altamente lucrativo para el negocio y para el capital humano que brinda el servicio.</p>
                                 <p>Nuestra premisa básica es que no necesitas ser un estilista para iniciar tu propio salón de belleza.</p>
@@ -207,6 +246,40 @@
 
         const Top = {
             template:'#top',
+            data(){
+                return {
+                    send: false,
+                    sending: false,
+                    urlApi: 'http://127.0.0.1:8000/api/'
+                }
+            },
+            mounted(){
+                this.setVisit();
+            },
+            methods: {
+                toggleModal (modal){
+                    if(modal === 'add'){
+                        this.send = !this.send;
+                    }
+                },
+                addPeople(e){
+                    this.sending = !this.sending;
+                    axios.post(this.urlApi + 'people', new FormData(e.target))
+                          .then( res => {
+                              this.toggleModal('add');
+                          })
+                          .catch( res => {
+                              console.log(res);
+                          })
+                },
+                disabled(e){
+                    e.target.disabled = true;
+                },
+                setVisit(){
+                    axios.post(this.urlApi + 'visit');
+                }
+            },
+            
         }
 
         const Service = {
@@ -350,13 +423,11 @@
                 'weworkcomponent': WeWork,
                 'aboutcomponent': About,
                 'footercomponent': Footer,
-            }
+            },
         });
 
    
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 </body>
 </html>

@@ -54,6 +54,12 @@
         line-height: 30px;
     }
 
+    #topSection .alert{
+        display: block;
+        position: relative;
+        margin-top:200px;
+    }
+
     #topSection form{
         margin-top:100px;
     }
@@ -61,18 +67,59 @@
     #secondAbout{
         position:relative;
         background:#fff;
-        max-width: 1000px;
         margin: auto;
     }
 
+    
+    #secondAbout img{
+        transform: scale(.75);
+        top:-150px;
+        left:50px;
+        z-index: 10;
+    }
+
     #secondAbout .text{
-        padding: 100px 25px;
+        position: relative;
+        left:-100px;
+        padding: 100px 50px 100px 70px;
         background-color: var(--bg-pink);
+        z-index: 5;
+    }
+
+    #secondAbout .text h2,
+    #secondAbout .text i{
+        line-height: 20px;
+    }
+
+    #secondAbout .text h2{
+        font-size: 30px;
+    }
+
+    #secondAbout .text i{
+        font-size: 20px;
     }
 
     #footerSection .mancha{
         position: absolute;
         top:10px;
+    }
+
+    #footerSection h2{
+        font-size: 45px;
+        width:100%;
+        max-width: 900px;
+        letter-spacing: 8px;
+    }
+
+    #footerSection .numbers h3,
+    #footerSection .numbers h4{
+        line-height: 35px;
+    }
+
+    
+    #footerSection .numbers h3{
+        font-size: 100px;
+        font-weight: inherit;
     }
 
     #weWorkSection{
