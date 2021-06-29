@@ -80,6 +80,7 @@ input:-webkit-autofill:focus,
 }
 
 .mancha{
+    margin-top:-35px;
     display: block;
     max-width: 150px;
 }
