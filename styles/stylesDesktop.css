@@ -18,6 +18,7 @@
     #topSection .text{
         margin-top:100px;
     }
+    
 
     #topSection h1,
     #topSection h2,
@@ -70,11 +71,7 @@
         padding: 0px;
     }
 
-    #serviceSection .target:hover{
-        cursor:pointer;
-        transition: all .5s ease-in-out;
-        box-shadow: 0px 0px 25px 0px rgba(0,0,0,.5);
-    }
+
 
     #secondAbout{
         position:relative;
@@ -82,12 +79,23 @@
         margin: auto;
     }
 
+    #secondAbout .box-dark{
+        top:-100px;
+        left:0px
+    }
+    
+
     
     #secondAbout img{
         transform: scale(.75);
         top:-150px;
+        margin-top:0px;
         left:50px;
         z-index: 10;
+    }
+
+    #aboutSection .content-light{
+        margin-top:50px;
     }
 
     #secondAbout .text{
@@ -101,19 +109,22 @@
     #secondAbout .text h2,
     #secondAbout .text i{
         line-height: 20px;
+        text-align: left;
     }
 
     #secondAbout .text h2{
         font-size: 30px;
+       
     }
 
     #secondAbout .text i{
         font-size: 20px;
+        text-align: left;
     }
 
-    #footerSection .mancha{
+    .mancha{
         position: absolute;
-        top:10px;
+        max-width: 200px;
     }
 
     #footerSection h2{

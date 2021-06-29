@@ -80,9 +80,18 @@ input:-webkit-autofill:focus,
 }
 
 .mancha{
-
     display: block;
-    max-width: 250px;
+    max-width: 150px;
+}
+
+.mancha-right{
+    position:absolute;
+    right:0px; 
+}
+
+.mancha-left{
+    position: left;
+    left:0px;
 }
 
 .btn{
@@ -118,6 +127,15 @@ input:-webkit-autofill:focus,
     background-color: var(--bg-yellow);
     z-index: 5;
     transition: all .5s ease-in-out;
+  }
+
+  .box-dark{
+      position: absolute;
+      display: block;
+      background-color: var(--bg-dark);
+      width: 300px;
+      height: 300px;
+      padding: 10px 10px;
   }
 
 
@@ -227,7 +245,6 @@ input:-webkit-autofill:focus,
 }
 
 #serviceSection .row{
-    background-color: var(--bg-pink);
     border-radius: 10px;
     padding: 15px;
 }
@@ -236,7 +253,7 @@ input:-webkit-autofill:focus,
 #serviceSection img{
     display:block;
     width:100%;
-    max-width: 150px;
+    max-width: 130px;
     margin:auto;
 }
 
@@ -250,7 +267,15 @@ input:-webkit-autofill:focus,
     border-radius:10px;
     width:100%;
     padding:10px;
-    min-height:420px;
+    min-height:320px;
+}
+
+#weWorkSection .target:hover,
+#serviceSection .target:hover{
+    cursor:pointer;
+    transition: all .5s ease-in-out;
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,.5);
+    transform: scale(1.1);
 }
 
 
@@ -265,7 +290,7 @@ input:-webkit-autofill:focus,
     font-weight: normal;
     margin-top:20px;
     font-weight: bold;
-    font-family: 'Bembo';
+    font-family: 'Calibri';
     color:black;
     text-align: center !important;
 }
@@ -273,12 +298,13 @@ input:-webkit-autofill:focus,
 #serviceSection .target h4{
     display: block;
     font-weight: bold;
-    font-family: 'Champage';
-    letter-spacing: 2px;
+    font-family: 'Calibri';
     font-size:15px;
     max-width: 200px;
     margin:auto;
     text-align: left;
+    color:black;
+    letter-spacing: 0px;
 }
 
 /* EXPERIENCE */
@@ -307,6 +333,10 @@ input:-webkit-autofill:focus,
     margin: 20px 0;
 }
 
+#experienceSection .target img[src="svg/experience3.svg"]{
+    transform:scale(.6);
+}
+
 #experienceSection .target img{
     position: absolute;
     display:block;
@@ -320,10 +350,10 @@ input:-webkit-autofill:focus,
 
 #experienceSection .target span{
     display: block;
-    font-family: 'Champage';
+    font-family: 'Calibri';
     color:black;
     text-align: center;
-    font-size:18px;
+    font-size:15px;
     max-width: 300px;
     margin:auto;
 }
@@ -435,7 +465,7 @@ input:-webkit-autofill:focus,
     display: block;
     width:100%;
     height:100%;
-    max-height: 300px;
+    max-height: 290px;
 }
 
 
@@ -456,6 +486,7 @@ input:-webkit-autofill:focus,
     display: block;
     width: 100%;
     background: white;
+    margin-top:200px;
 }
 
 #firstAbout{
@@ -489,18 +520,21 @@ input:-webkit-autofill:focus,
     background: var(--bg-pink);
 }
 
+#secondAbout .box-dark{
+    top:100px;
+    left:0px
+}
+
 #secondAbout img{
-    position: relative;
+    position:relative;
     display: block;
     width:100%;
     margin:auto;
-    top:-70px;
+    margin-bottom:50px;
+    margin-top:-350px;
 }
 
-#secondAbout h2,
-#secondAbout p{
-    font-family:'Calibri';
-}
+
 
 #aboutSection .aro{
     display: block;
@@ -528,7 +562,18 @@ input:-webkit-autofill:focus,
     left:50px;
 }
 
+#secondAbout i{
+    display: block;
+    text-align: center !important;
+}
+
+#secondAbout h2,
+#secondAbout p{
+    font-family:'Calibri';
+}
+
 #secondAbout h2{
+    text-align: center;
     font-size:28px;
     letter-spacing: 5px;
 }
@@ -557,7 +602,6 @@ input:-webkit-autofill:focus,
     max-width: 500px;
     display: block;
     color: var(--bg-pink-dark);
-    font-weight: bold;
     font-size:35px;
 }
 
@@ -572,7 +616,6 @@ input:-webkit-autofill:focus,
     font-size:70px;
     margin: 20px auto;
     font-family: 'Bembo';
-    font-weight: bold;
 }
 
 #footerSection .numbers h4{
@@ -613,9 +656,11 @@ input:-webkit-autofill:focus,
 
 #end .target h4{
     color: white;
-    font-size: 17px;
+    font-size: 18px;
     letter-spacing: 0;
     text-align: center;
+    font-weight: 500;
+    font-family: 'Champage';
 }
 
 /**

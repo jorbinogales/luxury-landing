@@ -107,9 +107,9 @@
 
     <template id="service">
         <div>
-           <section id="serviceSection" class="p-5">
+           <section id="serviceSection" class="p-md-5">
                 <div class="row row-max">
-                    <div class="col-6 col-md-3 p-0 m-0 p-md-2" v-for="service in services">
+                    <div class="col-12 col-md-3 p-md-2" v-for="service in services">
                         <div class="target">
                             <img :src="'img/'+service.img" alt="luxury">
                             <h3>{{ service.title }}</h3>
@@ -123,13 +123,14 @@
 
     <template id="experience">
         <div>
-            <section id="experienceSection" class="p-5">
+            <section id="experienceSection" class="p-md-5">
+                <img src="img/mancha1.png" class="mancha mancha-right" alt="">
                  <h2><span>6</span> Áreas de experiencia en el sector belleza</h2>
                  <div class="row row-max">
-                     <div class="col-6 col-md-4" v-for="experience in experiences">        
+                     <div class="col-12 col-md-4" v-for="experience in experiences">        
                         <div class="target">
                             <div>
-                                <img :src="'img/'+experience.img+'.png'" alt="luxury">
+                                <img :src="'svg/'+experience.img+'.svg'" alt="luxury">
                             </div>
                             <span>{{ experience.description }}</span>
                         </div>
@@ -141,7 +142,7 @@
 
     <template id="weWork">
         <div>
-           <section id="weWorkSection" class="pr-5 pl-5 pb-5 position-relative">
+           <section id="weWorkSection" class="p-md-5 position-relative">
                <div class="background bg-1"></div>
                <div class="background bg-2"></div>
                <div class="background bg-3"></div>
@@ -193,6 +194,8 @@
                 <img src="img/aro.png" class="aro aro-3 d-none d-md-block" alt="">
 
                 <div class="row row-max p-4" id="secondAbout">
+                    <div class="box-dark t-50">
+                    </div>
                     <div class="col-12 col-md-6">
                         <img src="img/about2.png" alt="">
                     </div>
@@ -214,7 +217,7 @@
     <template id="footer">
         <div>
             <section id="footerSection" class="position-relative">
-                <img src="img/mancha2.png" class="mancha" alt="">
+                <img src="img/mancha2.png" class="mancha mancha-left" alt="">
                 <div class="row m-auto p-5">
                     <div class="col-12 p-0">
                         <h2>Grandes números, para grandes negocios</h2>
@@ -233,7 +236,7 @@
                         </div>
                     </div>
                     <div class="row m-auto row-max p-0">
-                        <div class="col-12 col-md-3 p-0 m-0" v-for="socialmedia in socialmedias">
+                        <div class="col-6 col-md-3 p-0 m-0" v-for="socialmedia in socialmedias">
                             <div class="target">
                                 <img :src="'img/'+socialmedia.img" alt="luxury">
                                 <h4>{{socialmedia.text}}</h4>
