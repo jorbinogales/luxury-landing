@@ -71,6 +71,11 @@
         padding: 0px;
     }
 
+    #serviceSection .target{
+        display: block;
+        min-height: 400px;
+    }
+
 
 
     #secondAbout{
