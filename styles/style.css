@@ -226,10 +226,17 @@ input:-webkit-autofill:focus,
     z-index: 0;
 }
 
+#serviceSection .row{
+    background-color: var(--bg-pink);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+
 #serviceSection img{
     display:block;
     width:100%;
-    max-width: 200px;
+    max-width: 150px;
     margin:auto;
 }
 
@@ -241,17 +248,11 @@ input:-webkit-autofill:focus,
     margin-bottom:25px;
     background-color: var(--bg-pink);
     border-radius:10px;
-    width:90%;
-    max-width:300px;
-    padding:20px;
+    width:100%;
+    padding:10px;
     min-height:420px;
 }
 
-#serviceSection .target:hover{
-    cursor:pointer;
-    transition: all .5s ease-in-out;
-    box-shadow: 0px 0px 25px 0px rgba(0,0,0,.5);
-}
 
 #serviceSection .taregt h3,
 #serviceSection .target h4{
@@ -275,9 +276,9 @@ input:-webkit-autofill:focus,
     font-family: 'Champage';
     letter-spacing: 2px;
     font-size:15px;
-    text-align: center !important;
     max-width: 200px;
     margin:auto;
+    text-align: left;
 }
 
 /* EXPERIENCE */
@@ -381,19 +382,60 @@ input:-webkit-autofill:focus,
 #weWorkSection .row .target{
     display: block;
     max-width: 300px;
-    background: var(--btn-gold-gradient);
     margin:auto;
-    border-radius: 50%;
-    padding: 3px;
     margin: 20px auto;
+    background-color: white;
+    overflow-y: hidden;
 }
 
-#weWorkSection .row .target img{
+
+#weWorkSection .row .target .target-header{
+    position:relative;
+    background-color: white;
+    padding: 5px;
+}
+
+#weWorkSection .row .target .target-header .logo{
+    border-radius: 50%;
+    display: block;
+    width:55px;
+    height:55px;
+    padding: 3px 3px;
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+}
+
+#weWorkSection .row .target .target-header img{
+    display: block;
+    width:49px;
+    height:49px;
+    border-radius: 50%;
+    background: white;
+    padding: 3px;
+}
+
+#weWorkSection .row .target .target-header h3{
+    display: block;
+    font-size: 15px;
+    color: var(--bg-dark);
+    font-weight: bold;
+    position: absolute;
+    top:10px;
+    left:65px;
+    font-family: 'Champage';
+}
+
+#weWorkSection .row .target .target-body{
+    padding: 5px;
+    max-height: 300px;
+}
+
+
+#weWorkSection .row .target .target-body img{
+    position: relative;
     display: block;
     width:100%;
-    background: var(--bg-dark);
-    border-radius: 50%;
-    padding: 3px;
+    height:100%;
+    max-height: 300px;
 }
 
 

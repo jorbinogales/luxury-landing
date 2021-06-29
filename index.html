@@ -109,7 +109,7 @@
         <div>
            <section id="serviceSection" class="p-5">
                 <div class="row row-max">
-                    <div class="col-12 col-md-3" v-for="service in services">
+                    <div class="col-6 col-md-3 p-0 m-0 p-md-2" v-for="service in services">
                         <div class="target">
                             <img :src="'img/'+service.img" alt="luxury">
                             <h3>{{ service.title }}</h3>
@@ -126,7 +126,7 @@
             <section id="experienceSection" class="p-5">
                  <h2><span>6</span> Áreas de experiencia en el sector belleza</h2>
                  <div class="row row-max">
-                     <div class="col-12 col-md-4" v-for="experience in experiences">        
+                     <div class="col-6 col-md-4" v-for="experience in experiences">        
                         <div class="target">
                             <div>
                                 <img :src="'img/'+experience.img+'.png'" alt="luxury">
@@ -150,8 +150,14 @@
                     <h2>Algunos de nuestros trabajos</h2>
                     <div class="row row-max">
                         <div class="col-12 col-md-4" v-for="work in works">
-                            <div>
-                                <div class="target">
+                            <div class="target">
+                                <div class="target-header">
+                                    <div class="logo">
+                                        <img src="img/isotipo.jpg" alt="">
+                                    </div>
+                                    <h3>luxurysalon.ve</h3>
+                                </div>
+                                <div class="target-body">
                                     <img :src="'img/'+work.img" alt="luxury">
                                 </div>
                             </div>
