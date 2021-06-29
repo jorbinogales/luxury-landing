@@ -11,6 +11,7 @@
           integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" 
           crossorigin="anonymous"
     >
+    <link rel="icon" href="img/icon.png">
     <link href="styles/style.css" rel="stylesheet">
     <link href="styles/stylesDesktop.css" rel="stylesheet">
 </head>
@@ -237,10 +238,10 @@
                     </div>
                     <div class="row m-auto row-max p-0">
                         <div class="col-6 col-md-3 p-0 m-0" v-for="socialmedia in socialmedias">
-                            <div class="target">
+                            <a class="target" :href="socialmedia.url">
                                 <img :src="'img/'+socialmedia.img" alt="luxury">
                                 <h4>{{socialmedia.text}}</h4>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -404,7 +405,7 @@
                         {
                             img: 'red1.png',
                             text: '0414-5175159',
-                            url: 'web.whatsapp.web/send?phone=58414517519'
+                            url: 'https://web.whatsapp.com/send?phone=58414517519'
                         },
                         {
                             img: 'red2.png',

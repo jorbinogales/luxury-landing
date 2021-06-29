@@ -2,6 +2,10 @@
 var totalnumbers = 0;
 var breakScroll = false;
 
+var service = [];
+var experience = [];
+var work = [];
+
 document.addEventListener('load', function() {
      ScrollCount.Const();
 }, true);
@@ -10,6 +14,8 @@ document.addEventListener('load', function() {
 document.addEventListener('scroll', function() {
     ScrollCount.OnScroll();
 }, true);
+
+
 
 class ScrollCount
 {
@@ -80,3 +86,4 @@ class ScrollCount
     }
 
 }
+
